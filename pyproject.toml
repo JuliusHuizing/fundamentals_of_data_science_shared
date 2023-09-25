@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "fundamentals-of-data-science"
+version = "0.1.0"
+description = ""
+authors = ["Julius <j.b.huizign@gmail.com>"]
+readme = "README.md"
+packages = [{include = "fundamentals_of_data_science"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
