@@ -1,0 +1,15 @@
+Report and Submission
+
+Please submit a .zip file containing a .pdf report and the code (e.g., .ipynb notebook) you used in your analysis. Each group is expected to work independently in their code/notebook. Grading will be mostly based on the report and the code will only be checked in case any doubts arise on how the analysis was performed. The report should contain all the information for a reader to understand the analysis and results. Plagiarism detection will be used (the 'Regulations governing fraud and plagiarism for UvA students' applies to this course. This will be monitored carefully. Upon suspicion of fraud or plagiarism, the Examinations Board of the programme will be informed).
+
+Your report should be ~6 pages. The maximum is 8 pages, not including references (any page beyond the page limit won't be read and will lead to a penalty in the final grade). The report styles are loosely based on the style of computer science scientific journal papers. The basic guideline for the lay out of your report is as follows:
+ 
+Title - Author List (Mandatory, alphabetic order) - Abstract - Introduction - Methodology  - Results and Discussion  - Conclusion - References
+ 
+You can vary from this a little if you wish. Indeed we left out "Related Work", which is typically found in Computer Science papers. We suggest discussing any related work in the introduction/methodology, though you are free to add a dedicated "Related Work" section if you wish. Specific layout (font size / spacing / columns) details are attached at the end of the assignment. 
+
+In your methodology, please be clear about how you approached the dataset(s) and pre-processed them before the actual analysis. Also be clear in your report about the type of analysis that you are conducting (remember the type of questions discussed in Lecture 2) Combining analyses is desirable.
+
+You can find the report template in LaTeX Download LaTeX and Word Download Word. If you are having troubles compiling the LaTeX files in your computer, feel free to use overleaf Links to an external site..  
+
+Please keep in mind that plagiarism will be checked. 
