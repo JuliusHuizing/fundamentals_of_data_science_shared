@@ -1,6 +1,17 @@
 import pandas as pd
+import os
 
-root_path = "../.."
+current_path = os.path.dirname(os.path.realpath(__file__))
+root_path = f"{current_path}/../../.."
+
+
+
+def build_clean_dataframe() -> pd.DataFrame:
+    df = build_dataframe()
+    df = df.dropna()
+    df = remove_irrelevant_disasters(df)
+    df = remove_irrelevant_columns(df)
+    return df
 
 def build_dataframe() -> pd.DataFrame:
     path = f"{root_path}/data/disasters.xlsx"
@@ -18,7 +29,11 @@ def remove_irrelevant_disasters(df) -> pd.DataFrame:
     df = df[df["causes climate change sentiment"] == True]
     return df
  
-def build_clean_dataframe(df) -> pd.DataFrame:
-  df = remove_irrelevant_disasters(df)
-  return df
-  
+
+def remove_irrelevant_columns(df) -> pd.DataFrame:
+    columns_of_interest = ["Country", "Total Deaths", "Year", "Disaster Type"]
+    df = df[columns_of_interest]
+    return df
+    
+    
+      
