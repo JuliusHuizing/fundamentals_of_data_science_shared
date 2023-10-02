@@ -21,7 +21,9 @@ def build_dataframe() -> pd.DataFrame:
     df["country"] = df["country"].map(iso_to_country_name_map)
     return df
 
+
 def create_target_value_matrix(country_year_pairs, keywords, stemmer=PorterStemmer(), tokenizer=RegexpTokenizer(r'\w+')) -> np.array:
+    print(f"Creating feature matrix for {len(country_year_pairs)} country-year pairs)")
     countries = [pair[0] for pair in country_year_pairs]
     years = [pair[1] for pair in country_year_pairs] 
     df = create_prepoccesed_df(countries=countries, years=years, keywords=keywords, stemmer=stemmer, tokenizer=tokenizer)
@@ -126,7 +128,7 @@ def count_keywords_in_text(keywords, text):
 
 def normalize_score_min_max(score, min_count, max_count):
     if max_count == min_count:
-        denom = 0
+        denom = 1
     else :
         denom = max_count - min_count
     return (score - min_count) / denom

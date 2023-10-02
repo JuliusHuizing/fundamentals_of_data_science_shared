@@ -61,14 +61,14 @@ def create_feature_train_matrix(country_year_pairs, feature_vector_builder=build
     df = build_clean_dataframe()
     result = []
     for (country, year) in country_year_pairs:
-        row = df[(df['Country'] == country) & (df['Year'] == year)]
-        if len (row) != 0:
-            last_row = row
-            feature_vector = feature_vector_builder(df, country, year)
-            result.append(feature_vector)
-            
-    return np.array(result)
-
+        # row = df[(df['Country'] == country) & (df['Year'] == year)]
+        # # if len (row) != 0:
+        # #     last_row = row
+        feature_vector = feature_vector_builder(df, country, year)
+        result.append(feature_vector)
+    result = np.array(result)
+    assert(result.shape[0] == len(country_year_pairs), "The number of rows in the feature matrix should be equal to the number of country-year pairs.")
+    return result
 # def create_feature_train_matrix(countries, years, feature_vector_builder=build_feature_vector_v1) -> np.array:
 #     """
 #     Create a feature matrix for a given DataFrame and list of years.
